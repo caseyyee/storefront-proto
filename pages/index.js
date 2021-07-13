@@ -4,13 +4,15 @@ import IndigoIframe from '../components/indigo-iframe';
 import { IntlProvider } from 'react-intl';
 import { useRouter } from 'next/router';
 
-const viewerUrl = 'https://production.d1gqpxjdsc5l4a.amplifyapp.com/?url=';
-const defaultAssetUrl =
+const VIEWER_URL = 'https://production.d1gqpxjdsc5l4a.amplifyapp.com/?url=';
+const DEFAULT_ASSET_URL =
   'https://s3.amazonaws.com/shakingearthdigital.indigo/samples/realistic_cat.zip';
+const DEFAULT_PRODUCT_NAME = 'Product Name';
 
 export default function Home() {
   const router = useRouter();
-  const assetUrl = viewerUrl + encodeURIComponent(router.query.assetUrl || defaultAssetUrl);
+  const assetUrl = VIEWER_URL + encodeURIComponent(router.query.assetUrl || DEFAULT_ASSET_URL);
+  const productName = router.query.productName || DEFAULT_PRODUCT_NAME;
 
   return (
     <IntlProvider locale="en" defaultLocale="en">
@@ -59,7 +61,7 @@ export default function Home() {
         </div>
         <div className="flex-1">
           <section className="flex w-full mt-16 p-4">
-            <div className="flex-1 text-3xl font-medium">Product Name</div>
+            <div className="flex-1 text-3xl font-medium">{productName}</div>
             <div className="text-3xl font-medium">$184</div>
           </section>
 
