@@ -86,7 +86,7 @@ const IndigoIframe = ({ src }) => {
           data-testid="model-loading"
           className={classNames(classes.full, classes.verticalCenter)}
         >
-            <CircularProgress />
+          <CircularProgress />
         </div>
       )}
       <iframe
