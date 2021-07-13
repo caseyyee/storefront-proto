@@ -1,82 +1,89 @@
-import Head from 'next/head'
+import StarIcon from '@material-ui/icons/Star';
+import Head from 'next/head';
+import IndigoIframe from  '../components/indigo-iframe';
+import {IntlProvider} from 'react-intl'
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <IntlProvider locale="en" defaultLocale="en">
       <Head>
-        <title>Create Next App</title>
+        <title>Unity Storefront</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <div className="border-b border-gray-300">
+        <div className="flex container mx-auto">
+          <div className="grid gap-3 grid-flow-col py-5">
+            <img src="images/unity-logo.svg" height="200"/>
+            <div className="text-3xl font-medium">
+              Storefront
+            </div>
+          </div>
+          <div className="flex-1 flex justify-center">
+            <div className="grid grid-flow-col auto-cols-max gap-20">
+              <div className="flex items-center justify-center text-xl border-b-2 border-black font-medium">Products</div>
+              <div className="flex items-center justify-center text-xl text-gray-400 font-medium">Collections</div>
+              <div className="flex items-center justify-center text-xl text-gray-400 font-medium">Shipping</div>
+            </div>
+          </div>
+          <div className="border-l border-gray-300 flex items-center justify-center">
+            <div className="grid grid-rows-2 grid-flow-col">
+              <div className="row-span-2 ml-4 mr-2 flex items-center justify-center">
+                <div className="rounded-full h-9 w-9 flex items-center justify-center text-white bg-gradient-to-r from-green-400 to-blue-500">J</div>
+              </div>
+              <div>Jonny Kim</div>
+              <div className="text-sm text-gray-400">Ustwo Games</div>
+            </div>
+          </div>
         </div>
-      </main>
+      </div>
 
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
-    </div>
+      <div className="container mx-auto flex">
+        <div class="w-7/12">
+          <div className="mt-16 mr-16" style={{ height: '600px' }}>
+            <IndigoIframe src="https://production.d1gqpxjdsc5l4a.amplifyapp.com/?url=https%3A%2F%2Fs3.amazonaws.com%2Fshakingearthdigital.indigo%2Fsamples%2Frealistic_cat.zip"/>
+          </div>
+        </div>
+        <div class="flex-1">
+          <section className="flex w-full mt-16 p-4">
+            <div className="flex-1 text-3xl font-medium">
+              Product Name
+            </div>
+            <div className="text-3xl font-medium">
+              $184
+            </div>
+          </section>
+          
+          <section className="px-4">
+            <span className="fill-current text-yellow-400"><StarIcon/><StarIcon/><StarIcon/><StarIcon/></span>
+            <span className="ml-4 text-sm text-gray-400">930 reviews</span>
+          </section>
+
+          <section className="border-t border-b border-gray-300 p-4 my-6">
+            <div className="font-medium">Fit</div>
+            <div className="text-gray-400">Standard</div>
+          </section>
+
+          <button className="bg-blue-400 text-white w-full p-4 rounded-md font-medium">Add to bag</button>
+
+          <section className="p-4 my-6">
+            <div className="font-medium mb-4">Product Info</div>
+            <div>The XL edition offers a standard size frame with enhanced lens coverage, and every millimeter of the peripheral view is optimized with High Definition Optics™ in a durable yet lightweight design that takes performance to the next level and brings style along for the ride.</div>
+          </section>
+
+          <section className="p-4 my-6 grid grid-cols-2 grid-flow-cols gap-4">
+            <div className="text-sm text-gray-400">Lightweight O Matter™ frame material with ellipse metal icon accents</div>
+            <div className="text-sm text-gray-400">Unobtainium™ earsocks and nosepads for increased comfort and performance</div>
+            <div className="border-b border-gray-300 col-span-2"></div>
+            <div className="text-sm text-gray-400">8.75 base lens geometry with HDO™</div>
+            <div className="text-sm text-gray-400">Available with Prizm™ lenses to enhance color, contrast and detail for an optimized experience</div>
+            <div className="border-b border-gray-300 col-span-2"></div>
+            <div className="text-sm text-gray-400">Polarized and Iridium™ lens options available</div>
+            <div className="text-sm text-gray-400">Available with Oakley Authentic Prescription Lenses</div>
+            <div className="border-b border-gray-300 col-span-2"></div>
+            <div className="text-sm text-gray-400">Protective soft vault included</div>
+          </section>
+        </div>
+      </div>
+    </IntlProvider>
   )
 }
