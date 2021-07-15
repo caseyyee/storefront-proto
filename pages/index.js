@@ -4,7 +4,7 @@ import IndigoIframe from '../components/indigo-iframe';
 import { IntlProvider } from 'react-intl';
 import { useRouter } from 'next/router';
 
-const VIEWER_URL = 'https://production.d1gqpxjdsc5l4a.amplifyapp.com/?url=';
+const VIEWER_URL = 'https://production.d2t4l2hcm0h77u.amplifyapp.com/?url=';
 const DEFAULT_ASSET_URL =
   'https://s3.amazonaws.com/shakingearthdigital.indigo/samples/realistic_cat.zip';
 const DEFAULT_PRODUCT_NAME = 'Product Name';
