@@ -22,11 +22,11 @@ export default function Home() {
       </Head>
       <div className="border-b border-gray-300">
         <div className="flex container mx-auto">
-          <div className="grid gap-3 grid-flow-col py-5">
-            <img src="images/unity-logo.svg" height="200" />
-            <div className="text-3xl font-medium">Storefront</div>
+          <div className="grid gap-3 grid-flow-col py-5 px-4 md:px-0">
+            <img src="images/unity-logo.svg" className="h-8 md:h-12" />
+            <div className="text-2xl md:text-3xl font-medium">Storefront</div>
           </div>
-          <div className="flex-1 flex justify-center">
+          <div className="flex-1 hidden md:flex md:justify-center">
             <div className="grid grid-flow-col auto-cols-max gap-20">
               <div className="flex items-center justify-center text-xl border-b-2 border-black font-medium">
                 Products
@@ -53,18 +53,17 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container mx-auto flex">
-        <div className="w-7/12">
-          <div className="mt-16 mr-16" style={{ height: '600px' }}>
+      <div className="container mx-auto flex flex-col md:flex-row">
+        <div className="w-full md:w-7/12">
+          <div className="md:mt-16 md:mr-16 h-smPlayer md:h-lgPlayer">
             <IndigoIframe src={assetUrl} />
           </div>
         </div>
-        <div className="flex-1">
-          <section className="flex w-full mt-16 p-4">
+        <div className="flex-1 px-4 md:px-0">
+          <section className="flex w-full md:mt-16 p-4">
             <div className="flex-1 text-3xl font-medium">{productName}</div>
             <div className="text-3xl font-medium">$184</div>
           </section>
-
           <section className="px-4">
             <span className="fill-current text-yellow-400">
               <StarIcon />

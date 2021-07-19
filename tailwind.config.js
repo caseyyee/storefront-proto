@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   mode: 'jit',
@@ -7,12 +7,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans]
-      },  
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+      },
+      height: {
+        smPlayer: '300px',
+        lgPlayer: '500px',
+      },
     },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};
