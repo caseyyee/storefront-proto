@@ -4,9 +4,9 @@ import IndigoIframe from '../components/indigo-iframe';
 import { IntlProvider } from 'react-intl';
 import { useRouter } from 'next/router';
 
-const VIEWER_URL = 'https://production.d2t4l2hcm0h77u.amplifyapp.com/?url=';
+const VIEWER_URL = 'https://storefront-player.prd.mz.internal.unity3d.com/?url=';
 const DEFAULT_ASSET_URL =
-  'https://s3.amazonaws.com/shakingearthdigital.indigo/samples/realistic_cat.zip';
+  'https://9d00075a-0dc8-4c26-a304-27c5851fcd8e.client-api-stg.unity3dusercontent.com/client_api/v1/buckets/2717bc83-80ea-4261-9340-3c54b29f4671/entries/96bb1ba1-acf3-419a-a1a9-403c79deaa57/versions/47756251-201f-48a7-9780-11fac69f728e/content/';
 const DEFAULT_PRODUCT_NAME = 'Product Name';
 
 export default function Home() {
